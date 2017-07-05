@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import TodosListHeaer from './TodosListHeader';
+import TodosListHeader from './TodosListHeader';
 import TodosListItem from './TodosListItem';
 
 class TodosList extends React.Component {
@@ -11,8 +11,8 @@ class TodosList extends React.Component {
 
   render () {
     return (
-      <table style={{margin: "0 auto"}}>
-        <TodosListHeaer />
+      <table>
+        <TodosListHeader />
         <tbody>
           {
             this.renderItems()
