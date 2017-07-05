@@ -13,7 +13,7 @@ class TodosList extends React.Component {
 
   render () {
     return (
-      <table>
+      <table className="striped">
         <TodosListHeader />
         <tbody>
           {

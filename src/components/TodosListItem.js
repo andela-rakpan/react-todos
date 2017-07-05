@@ -49,16 +49,16 @@ class TodosListItem extends React.Component {
     if(this.state.isEditing) {
       return (
         <td> 
-          <button onClick={this.onSaveClick.bind(this)}>Save</button>
-          <button onClick={this.onCancelClick.bind(this)}>Cancel</button>
+          <button className="btn" onClick={this.onSaveClick.bind(this)}>Save</button>
+          <button className="btn" onClick={this.onCancelClick.bind(this)}>Cancel</button>
         </td>
       );
     }
 
     return (
       <td> 
-        <button onClick={this.onEditClick.bind(this)}>Edit</button>
-        <button onClick={this.onDeleteClick.bind(this)}>Delete</button>
+        <button className="btn" onClick={this.onEditClick.bind(this)}>Edit</button>
+        <button className="btn" onClick={this.onDeleteClick.bind(this)}>Delete</button>
       </td>
     );
   }
@@ -75,7 +75,9 @@ class TodosListItem extends React.Component {
       return (
         <td>
           <form onSubmit={this.onSaveClick.bind(this)}>
-            <input type="text" defaultValue={task} ref="editInput" />
+            <div className="input-field">
+              <input type="text" defaultValue={task} ref="editInput" />
+            </div>
           </form>
         </td>
       );
